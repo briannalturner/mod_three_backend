@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
         #### USERS ####
-bri = User.find_or_create_by!(username: "blt", password: "bitch", age: 21)
-joel = User.find_or_create_by!(username: "joely", password: "bitch", age: 20)
-jarrett = User.find_or_create_by!(username: "starwarsfan", password: "bitch", age: 25)
-robbie = User.find_or_create_by!(username: "robcomer", password: "bitch", age: 26)
-devil = User.find_or_create_by!(username: "theactualdevil", password: "bitch", age: 10000)
+bri = User.find_or_create_by!(username: "blt", password_digest: "bobross", age: 21)
+joel = User.find_or_create_by!(username: "joely", password_digest: "bobross", age: 20)
+jarrett = User.find_or_create_by!(username: "starwarsfan", password_digest: "bobross", age: 25)
+robbie = User.find_or_create_by!(username: "robcomer", password_digest: "bobross", age: 26)
+devil = User.find_or_create_by!(username: "theactualdevil", password_digest: "bobross", age: 10000)
 
         #### POSTS ####
 shoelaces = Post.find_or_create_by!(user: bri, subject: "Where to buy good skating shoelaces?", body: "Ullam eget? Molestiae, vivamus tincidunt, dui! Vehicula hic condimentum ullamcorper! Nesciunt optio, dictumst voluptatem dolorum? Libero repellendus dolores nostra! Officia, potenti debitis, quisquam labore. Esse laborum semper, suscipit massa! Vivamus, eros ante, hendrerit massa minima laboriosam montes sapien, sodales, elit excepteur quasi, urna aliqua, quam, quam felis ullamco? Tortor earum lacinia pharetra sagittis diam, natus quaerat, venenatis! Culpa sequi? Commodo? Penatibus est varius. Explicabo aliquam. Tellus accusamus litora deserunt accumsan nunc? Vestibulum, ante urna sagittis a, nesciunt conubia, omnis, voluptates, consectetur rem a, sollicitudin? Sociis nemo vitae expedita. Fugit posuere, neque? Hac nisi quisquam, nemo modi odio ipsum diamlorem beatae.")
@@ -26,14 +26,21 @@ mean3 = Comment.find_or_create_by!(user: bri, post: ollie, body: "bcause ur dum"
 nice4 = Comment.find_or_create_by!(user: robbie, post: zumiez, body: "yes")
 nice5 = Comment.find_or_create_by!(user: devil, post: zumiez, body: "no actually i am")
 
-        #### LIKES ####
-like1 = Like.find_or_create_by!(user: joel, post: shoelaces)
-like2 = Like.find_or_create_by!(user: bri, post: shoelaces)
-like3 = Like.find_or_create_by!(user: robbie, post: shoelaces)
-like4 = Like.find_or_create_by!(user: jarrett, post: zumiez)
-like5 = Like.find_or_create_by!(user: joel, post: ollie)
-like6 = Like.find_or_create_by!(user: devil, post: zumiez)
+        #### POST LIKES ####
+like1 = PostLike.find_or_create_by!(user: joel, post: shoelaces)
+like2 = PostLike.find_or_create_by!(user: bri, post: shoelaces)
+like3 = PostLike.find_or_create_by!(user: robbie, post: shoelaces)
+like4 = PostLike.find_or_create_by!(user: jarrett, post: zumiez)
+like5 = PostLike.find_or_create_by!(user: joel, post: ollie)
+like6 = PostLike.find_or_create_by!(user: devil, post: zumiez)
 
+        #### COMMENT LIKES ####
+like1 = CommentLike.find_or_create_by!(user: joel, comment: mean1)
+like2 = CommentLike.find_or_create_by!(user: bri, comment: nice1)
+like3 = CommentLike.find_or_create_by!(user: robbie, comment: mean2)
+like4 = CommentLike.find_or_create_by!(user: jarrett, comment: mean3)
+like5 = CommentLike.find_or_create_by!(user: joel, comment: nice4)
+like6 = CommentLike.find_or_create_by!(user: devil, comment: nice5)
 
-byebug
-0
+# byebug
+# 0
