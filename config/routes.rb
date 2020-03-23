@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sessions
   resources :comment_likes
   resources :post_likes
   resources :comments
