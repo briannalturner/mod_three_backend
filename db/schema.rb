@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_151633) do
+ActiveRecord::Schema.define(version: 2020_03_24_161839) do
 
   create_table "comment_likes", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 2020_03_23_151633) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
+    t.string "bio"
   end
 
   add_foreign_key "comment_likes", "comments"
