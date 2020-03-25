@@ -1,0 +1,2 @@
+class CommentSerializer < ApplicationRecord
+end

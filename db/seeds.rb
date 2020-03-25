@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+CommentLike.destroy_all
+PostLike.destroy_all
+Comment.destroy_all
+Post.destroy_all
+User.destroy_all
+
+
+
         #### USERS ####
 bri = User.find_or_create_by!(first_name: "Bri", last_name: "Turner", username: "blt", password_digest: "bobross", age: 21, bio: "I'm a beginner skateboarder who likes knitting, video games and pizza rolls", image: "https://images.unsplash.com/photo-1516182829191-0198936273eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 joel = User.find_or_create_by!(first_name: "Joel", last_name: "McKay", username: "joely", password_digest: "bobross", age: 20, bio: "I'm an advanced skateboarder who like programming, video games and Bri.", image: "https://images.unsplash.com/photo-1536616890852-460613def8c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
