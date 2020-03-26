@@ -19,7 +19,7 @@ class PostsController < ApplicationController
             :only => [:first_name, :last_name, :id]
         }, :comments => {
             :include => [
-                :user => {:only => [:first_name, :last_name, :id, :image, :username]},
+                :user => {:only => [:first_name, :last_name, :id, :image, :username, :posts]},
             ],
         }]
     end
